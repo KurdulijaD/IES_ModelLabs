@@ -20,4 +20,4 @@ project:
       tool:profile_envelope
               "Profile" ;
       tool:profile_namespace
-              "http://iec.ch/TC57/2007/LabsProfile#" .
+              "http://iec.ch/TC57/2007/profile#" .

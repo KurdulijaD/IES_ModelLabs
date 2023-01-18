@@ -193,7 +193,6 @@
   <rdf:Description rdf:about="#PowerSystemResource">
     <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
     <cims:belongsToCategory rdf:resource="#Package_Core"/>
-    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
     <rdfs:comment>A power system resource can be an item of equipment such as a switch, an equipment container containing many individual items of equipment such as a substation, or an organisational entity such as sub-control area. Power system resources can have measurements associated.</rdfs:comment>
     <rdfs:label>PowerSystemResource</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -237,15 +236,6 @@
     <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     <rdfs:domain rdf:resource="#IrregularTimePoint"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="#OutageSchedule.PowerSystemResource">
-    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
-    <rdfs:comment>A power system resource may have an outage schedule.</rdfs:comment>
-    <rdfs:label>PowerSystemResource</rdfs:label>
-    <rdfs:range rdf:resource="#PowerSystemResource"/>
-    <rdfs:domain rdf:resource="#OutageSchedule"/>
-    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="#Switch.SwitchingOperations">
@@ -425,11 +415,6 @@
     <rdfs:label>ConductingEquipment</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="#UnitSymbol.V">
-    <rdfs:comment>Voltage in volt.</rdfs:comment>
-    <rdfs:label>V</rdfs:label>
-    <rdf:type rdf:resource="#UnitSymbol"/>
-  </rdf:Description>
   <rdf:Description rdf:about="#IdentifiedObject">
     <cims:belongsToCategory rdf:resource="#Package_Core"/>
     <rdfs:comment>This is a root class to provide common identification for all classes needing identification and naming attributes.</rdfs:comment>
@@ -446,6 +431,11 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <rdfs:domain rdf:resource="#IdentifiedObject"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol.V">
+    <rdfs:comment>Voltage in volt.</rdfs:comment>
+    <rdfs:label>V</rdfs:label>
+    <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
   <rdf:Description rdf:about="#CurveData">
     <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
