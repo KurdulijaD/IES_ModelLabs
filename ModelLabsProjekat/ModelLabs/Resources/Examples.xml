@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:cim="http://iec.ch/TC57/2010/CIM-schema-cim15#"
+    xmlns:ftn="http://www.ftnydro.com/CIM15/2010/extension#">
+	
+	<cim:Curve rdf:ID="CU_1">
+		<cim:Curve.curveStyle>constantYValue</cim:Curve.curveStyle>
+		<cim:Curve.xMultiplier>c</cim:Curve.xMultiplier>
+		<cim:Curve.xUnit>A</cim:Curve.xUnit>
+		<cim:Curve.y1Multiplier>d</cim:Curve.y1Multiplier>
+		<cim:Curve.y1Unit>deg</cim:Curve.y1Unit>
+		<cim:Curve.y2Multiplier>G</cim:Curve.y2Multiplier>
+		<cim:Curve.y2Unit>degC</cim:Curve.y2Unit>
+		<cim:Curve.y3Multiplier>k</cim:Curve.y3Multiplier>
+		<cim:Curve.y3Unit>F</cim:Curve.y3Unit>
+		<cim:IdentifiedObject.aliasName>CU_Alias_1</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>CU_Id_1</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>CU_Name_1</cim:IdentifiedObject.name>
+	</cim:Curve>
+	<cim:Curve rdf:ID="CU_2">
+		<cim:Curve.curveStyle>formula</cim:Curve.curveStyle>
+		<cim:Curve.xMultiplier>m</cim:Curve.xMultiplier>
+		<cim:Curve.xUnit>g</cim:Curve.xUnit>
+		<cim:Curve.y1Multiplier>M</cim:Curve.y1Multiplier>
+		<cim:Curve.y1Unit>h</cim:Curve.y1Unit>
+		<cim:Curve.y2Multiplier>micro</cim:Curve.y2Multiplier>
+		<cim:Curve.y2Unit>H</cim:Curve.y2Unit>
+		<cim:Curve.y3Multiplier>n</cim:Curve.y3Multiplier>
+		<cim:Curve.y3Unit>Hz</cim:Curve.y3Unit>
+		<cim:IdentifiedObject.aliasName>CU_Alias_2</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>CU_Id_2</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>CU_Name_2</cim:IdentifiedObject.name>
+	</cim:Curve>
+	<cim:CurveData rdf:ID="CD_1">
+		<cim:CurveData.Curve rdf:resource="#CU_1"/>
+		<cim:CurveData.xvalue>10</cim:CurveData.xvalue>
+		<cim:CurveData.y1value>5</cim:CurveData.y1value>
+		<cim:CurveData.y2value>3</cim:CurveData.y2value>
+		<cim:CurveData.y3value>1</cim:CurveData.y3value>
+		<cim:IdentifiedObject.aliasName>CD_Alias_1</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>CD_Id_1</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>CD_Name_1</cim:IdentifiedObject.name>
+	</cim:CurveData>
+	<cim:CurveData rdf:ID="CD_2">
+		<cim:CurveData.Curve rdf:resource="#CU_2"/>
+		<cim:CurveData.xvalue>20</cim:CurveData.xvalue>
+		<cim:CurveData.y1value>10</cim:CurveData.y1value>
+		<cim:CurveData.y2value>6</cim:CurveData.y2value>
+		<cim:CurveData.y3value>2</cim:CurveData.y3value>
+		<cim:IdentifiedObject.aliasName>CD_Alias_2</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>CD_Id_2</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>CD_Name_2</cim:IdentifiedObject.name>
+	</cim:CurveData>
+	<cim:OutageSchedule rdf:ID="OS_1">
+		<cim:BasicIntervalSchedule.startTime>17.1.2023. 21:09:00</cim:BasicIntervalSchedule.startTime>
+		<cim:BasicIntervalSchedule.value1Multiplier>c</cim:BasicIntervalSchedule.value1Multiplier>
+		<cim:BasicIntervalSchedule.value1Unit>A</cim:BasicIntervalSchedule.value1Unit>
+		<cim:BasicIntervalSchedule.value2Multiplier>c</cim:BasicIntervalSchedule.value2Multiplier>
+		<cim:BasicIntervalSchedule.value2Unit>A</cim:BasicIntervalSchedule.value2Unit>
+		<cim:IdentifiedObject.aliasName>OS_Alias_1</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>OS_Id_1</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>OS_Name_1</cim:IdentifiedObject.name>
+	</cim:OutageSchedule>
+	<cim:OutageSchedule rdf:ID="OS_2">
+		<cim:BasicIntervalSchedule.startTime>17.1.2023. 21:09:00</cim:BasicIntervalSchedule.startTime>
+		<cim:BasicIntervalSchedule.value1Multiplier>c</cim:BasicIntervalSchedule.value1Multiplier>
+		<cim:BasicIntervalSchedule.value1Unit>A</cim:BasicIntervalSchedule.value1Unit>
+		<cim:BasicIntervalSchedule.value2Multiplier>c</cim:BasicIntervalSchedule.value2Multiplier>
+		<cim:BasicIntervalSchedule.value2Unit>A</cim:BasicIntervalSchedule.value2Unit>
+		<cim:IdentifiedObject.aliasName>OS_Alias_2</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>OS_Id_2</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>OS_Name_2</cim:IdentifiedObject.name>
+	</cim:OutageSchedule>
+	<cim:IrregularTimePoint rdf:ID="ITP_1">
+		<cim:IrregularTimePoint.IntervalSchedule rdf:resource="#OS_1"/>
+		<cim:IrregularTimePoint.time rdf:resource="#"/>
+		<cim:IrregularTimePoint.value1>25</cim:IrregularTimePoint.value1>
+		<cim:IrregularTimePoint.value2>50</cim:IrregularTimePoint.value2>
+		<cim:IdentifiedObject.aliasName>ITP_Alias_1</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>ITP_Id_1</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>ITP_Name_1</cim:IdentifiedObject.name>
+	</cim:IrregularTimePoint>
+	<cim:IrregularTimePoint rdf:ID="ITP_2">
+		<cim:IrregularTimePoint.IntervalSchedule rdf:resource="#OS_2"/>
+		<cim:IrregularTimePoint.time rdf:resource="#"/>
+		<cim:IrregularTimePoint.value1>30</cim:IrregularTimePoint.value1>
+		<cim:IrregularTimePoint.value2>60</cim:IrregularTimePoint.value2>
+		<cim:IdentifiedObject.aliasName>ITP_Alias_2</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>ITP_Id_2</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>ITP_Name_2</cim:IdentifiedObject.name>
+	</cim:IrregularTimePoint>
+	<cim:SwitchingOperation rdf:ID="SWO_1">
+		<cim:SwitchingOperation.newState>close</cim:SwitchingOperation.newState>
+		<cim:SwitchingOperation.operationTime>17.1.2023. 21:09:00</cim:SwitchingOperation.operationTime>
+		<cim:SwitchingOperation.OutageSchedule rdf:resource="#OS_1"/>
+		<cim:IdentifiedObject.aliasName>SWO_Alias_1</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>SWO_Id_1</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>SWO_Name_1</cim:IdentifiedObject.name>
+	</cim:SwitchingOperation>
+	<cim:SwitchingOperation rdf:ID="SWO_2">
+		<cim:SwitchingOperation.newState>open</cim:SwitchingOperation.newState>
+		<cim:SwitchingOperation.operationTime>17.1.2023. 21:09:00</cim:SwitchingOperation.operationTime>
+		<cim:SwitchingOperation.OutageSchedule rdf:resource="#OS_2"/>
+		<cim:IdentifiedObject.aliasName>SWO_Alias_2</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>SWO_Id_2</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>SWO_Name_2</cim:IdentifiedObject.name>
+	</cim:SwitchingOperation>
+	<cim:GroundDisconnector rdf:ID="GD_1">
+		<cim:Switch.SwitchingOperations rdf:resource="#SWO_1"/>
+		<cim:IdentifiedObject.aliasName>GD_Alias_1</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>GD_Id_1</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>GD_Name_1</cim:IdentifiedObject.name>
+	</cim:GroundDisconnector>
+	<cim:GroundDisconnector rdf:ID="GD_2">
+		<cim:Switch.SwitchingOperations rdf:resource="#SWO_2"/>
+		<cim:IdentifiedObject.aliasName>GD_Alias_2</cim:IdentifiedObject.aliasName>
+		<cim:IdentifiedObject.mRID>GD_Id_2</cim:IdentifiedObject.mRID>
+		<cim:IdentifiedObject.name>GD_Name_2</cim:IdentifiedObject.name>
+	</cim:GroundDisconnector>
+</rdf:RDF>
