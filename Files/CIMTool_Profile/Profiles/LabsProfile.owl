@@ -9,11 +9,6 @@
     xmlns="http://iec.ch/TC57/2007/LabsProfile#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xml:base="http://iec.ch/TC57/2007/LabsProfile" > 
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f96">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#UnitSymbol"/>
-    <rdfs:label>unit</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fb1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.aliasName"/>
@@ -179,15 +174,15 @@
     <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Curve.xMultiplier"/>
     <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fde"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fae">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID"/>
-    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7faf"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fb9">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#CurveData.y3value"/>
     <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fba"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fae">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID"/>
+    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7faf"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f8c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -305,21 +300,6 @@
     <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#IrregularTimePoint.value1"/>
     <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fa5"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f98">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Seconds.multiplier"/>
-    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f99"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f99">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#UnitMultiplier"/>
-    <rdfs:label>multiplier</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f93">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    <rdfs:label>value</rdfs:label>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fc2">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#CurveData.xvalue"/>
@@ -329,13 +309,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#IrregularTimePoint.IntervalSchedule"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="#Seconds">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Seconds"/>
-    <rdfs:subClassOf rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f98"/>
-    <rdfs:subClassOf rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f92"/>
-    <rdfs:subClassOf rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f95"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fb3">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -347,15 +320,15 @@
     <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#UnitMultiplier"/>
     <rdfs:label>value1Multiplier</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fce">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Curve.y2Unit"/>
-    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fcf"/>
-  </rdf:Description>
   <rdf:Description rdf:about="#IrregularIntervalSchedule">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#IrregularIntervalSchedule"/>
     <rdfs:subClassOf rdf:resource="#BasicIntervalSchedule"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Curve.y2Unit"/>
+    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fcf"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fe6">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
@@ -396,11 +369,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     <rdfs:label>y3value</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f95">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Seconds.unit"/>
-    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f96"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f81">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
@@ -458,11 +426,6 @@
   <rdf:Description rdf:about="#CurveStyle">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:subClassOf rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#CurveStyle"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f92">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://iec.ch/TC57/2010/CIM-schema-cim15#Seconds.value"/>
-    <owl:allValuesFrom rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7f93"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="X63X51c8ccdXa3X185bf8c1906Xa3X-7fbf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
