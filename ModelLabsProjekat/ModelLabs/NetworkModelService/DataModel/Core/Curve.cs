@@ -21,7 +21,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
         private UnitSymbol y1Unit;
         private UnitSymbol y2Unit;
         private UnitSymbol y3Unit;
-        List<long> curveDatas;
+        List<long> curveDatas = new List<long>();
 
         public CurveStyle CurveStyle { get => curveStyle; set => curveStyle = value; }
         public UnitMultiplier XMultiplier { get => xMultiplier; set => xMultiplier = value; }

@@ -52,7 +52,7 @@
 		<cim:IdentifiedObject.name>CD_Name_2</cim:IdentifiedObject.name>
 	</cim:CurveData>
 	<cim:OutageSchedule rdf:ID="OS_1">
-		<cim:BasicIntervalSchedule.startTime>17.1.2023. 21:09:00</cim:BasicIntervalSchedule.startTime>
+		<cim:BasicIntervalSchedule.startTime>2023-01-19T13:10:00</cim:BasicIntervalSchedule.startTime>
 		<cim:BasicIntervalSchedule.value1Multiplier>c</cim:BasicIntervalSchedule.value1Multiplier>
 		<cim:BasicIntervalSchedule.value1Unit>A</cim:BasicIntervalSchedule.value1Unit>
 		<cim:BasicIntervalSchedule.value2Multiplier>c</cim:BasicIntervalSchedule.value2Multiplier>
@@ -62,7 +62,7 @@
 		<cim:IdentifiedObject.name>OS_Name_1</cim:IdentifiedObject.name>
 	</cim:OutageSchedule>
 	<cim:OutageSchedule rdf:ID="OS_2">
-		<cim:BasicIntervalSchedule.startTime>17.1.2023. 21:09:00</cim:BasicIntervalSchedule.startTime>
+		<cim:BasicIntervalSchedule.startTime>2023-01-19T13:10:00</cim:BasicIntervalSchedule.startTime>
 		<cim:BasicIntervalSchedule.value1Multiplier>c</cim:BasicIntervalSchedule.value1Multiplier>
 		<cim:BasicIntervalSchedule.value1Unit>A</cim:BasicIntervalSchedule.value1Unit>
 		<cim:BasicIntervalSchedule.value2Multiplier>c</cim:BasicIntervalSchedule.value2Multiplier>
@@ -73,7 +73,7 @@
 	</cim:OutageSchedule>
 	<cim:IrregularTimePoint rdf:ID="ITP_1">
 		<cim:IrregularTimePoint.IntervalSchedule rdf:resource="#OS_1"/>
-		<cim:IrregularTimePoint.time rdf:resource="#"/>
+		<cim:IrregularTimePoint.time>5</cim:IrregularTimePoint.time>
 		<cim:IrregularTimePoint.value1>25</cim:IrregularTimePoint.value1>
 		<cim:IrregularTimePoint.value2>50</cim:IrregularTimePoint.value2>
 		<cim:IdentifiedObject.aliasName>ITP_Alias_1</cim:IdentifiedObject.aliasName>
@@ -82,7 +82,7 @@
 	</cim:IrregularTimePoint>
 	<cim:IrregularTimePoint rdf:ID="ITP_2">
 		<cim:IrregularTimePoint.IntervalSchedule rdf:resource="#OS_2"/>
-		<cim:IrregularTimePoint.time rdf:resource="#"/>
+		<cim:IrregularTimePoint.time>5</cim:IrregularTimePoint.time>
 		<cim:IrregularTimePoint.value1>30</cim:IrregularTimePoint.value1>
 		<cim:IrregularTimePoint.value2>60</cim:IrregularTimePoint.value2>
 		<cim:IdentifiedObject.aliasName>ITP_Alias_2</cim:IdentifiedObject.aliasName>
@@ -91,7 +91,7 @@
 	</cim:IrregularTimePoint>
 	<cim:SwitchingOperation rdf:ID="SWO_1">
 		<cim:SwitchingOperation.newState>close</cim:SwitchingOperation.newState>
-		<cim:SwitchingOperation.operationTime>17.1.2023. 21:09:00</cim:SwitchingOperation.operationTime>
+		<cim:SwitchingOperation.operationTime>2023-01-19T13:10:00</cim:SwitchingOperation.operationTime>
 		<cim:SwitchingOperation.OutageSchedule rdf:resource="#OS_1"/>
 		<cim:IdentifiedObject.aliasName>SWO_Alias_1</cim:IdentifiedObject.aliasName>
 		<cim:IdentifiedObject.mRID>SWO_Id_1</cim:IdentifiedObject.mRID>
@@ -99,7 +99,7 @@
 	</cim:SwitchingOperation>
 	<cim:SwitchingOperation rdf:ID="SWO_2">
 		<cim:SwitchingOperation.newState>open</cim:SwitchingOperation.newState>
-		<cim:SwitchingOperation.operationTime>17.1.2023. 21:09:00</cim:SwitchingOperation.operationTime>
+		<cim:SwitchingOperation.operationTime>2023-01-19T13:10:00</cim:SwitchingOperation.operationTime>
 		<cim:SwitchingOperation.OutageSchedule rdf:resource="#OS_2"/>
 		<cim:IdentifiedObject.aliasName>SWO_Alias_2</cim:IdentifiedObject.aliasName>
 		<cim:IdentifiedObject.mRID>SWO_Id_2</cim:IdentifiedObject.mRID>

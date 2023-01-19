@@ -93,12 +93,12 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 			LogManager.Log("Loading elements and creating delta...", LogLevel.Info);
 
 			//// import all concrete model types (DMSType enum)
-			ImportCurveData();
 			ImportCurve();
-			ImportGroundDisconnector();
-			ImportSwitchingOperations();
+			ImportCurveData();
 			ImportIrregularTimePoint();
 			ImportOutageSchedule();
+			ImportSwitchingOperations();
+			ImportGroundDisconnector();
 
 			LogManager.Log("Loading elements and creating delta completed.", LogLevel.Info);
 		}
@@ -223,7 +223,7 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 
 		private void ImportOutageSchedule()
 		{
-			SortedDictionary<string, object> cimOutageSchedules = concreteModel.GetAllObjectsOfType("FTN.TransformerWinding");
+			SortedDictionary<string, object> cimOutageSchedules = concreteModel.GetAllObjectsOfType("FTN.OutageSchedule");
 			if (cimOutageSchedules != null)
 			{
 				foreach (KeyValuePair<string, object> cimOutageSchedulePair in cimOutageSchedules)
@@ -262,7 +262,7 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 
 		private void ImportSwitchingOperations()
 		{
-			SortedDictionary<string, object> cimSWOperations = concreteModel.GetAllObjectsOfType("FTN.WindingTest");
+			SortedDictionary<string, object> cimSWOperations = concreteModel.GetAllObjectsOfType("FTN.SwitchingOperations");
 			if (cimSWOperations != null)
 			{
 				foreach (KeyValuePair<string, object> cimSWOperationPair in cimSWOperations)
@@ -301,7 +301,7 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 
 		private void ImportGroundDisconnector()
 		{
-			SortedDictionary<string, object> cimGroundDiscs = concreteModel.GetAllObjectsOfType("FTN.WindingTest");
+			SortedDictionary<string, object> cimGroundDiscs = concreteModel.GetAllObjectsOfType("FTN.GroundDisconnector");
 			if (cimGroundDiscs != null)
 			{
 				foreach (KeyValuePair<string, object> cimGroundDiscPair in cimGroundDiscs)
