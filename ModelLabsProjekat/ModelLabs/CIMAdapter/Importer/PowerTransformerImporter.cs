@@ -95,9 +95,9 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 			//// import all concrete model types (DMSType enum)
 			ImportCurve();
 			ImportCurveData();
-			ImportIrregularTimePoint();
 			ImportOutageSchedule();
-			ImportSwitchingOperations();
+			ImportIrregularTimePoint();
+			ImportSwitchingOperation();
 			ImportGroundDisconnector();
 
 			LogManager.Log("Loading elements and creating delta completed.", LogLevel.Info);
@@ -184,7 +184,7 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 
 		private void ImportIrregularTimePoint()
 		{
-			SortedDictionary<string, object> cimTimePoints = concreteModel.GetAllObjectsOfType("FTN.PowerTransformer");
+			SortedDictionary<string, object> cimTimePoints = concreteModel.GetAllObjectsOfType("FTN.IrregularTimePoint");
 			if (cimTimePoints != null)
 			{
 				foreach (KeyValuePair<string, object> cimTimePointPair in cimTimePoints)
@@ -260,9 +260,9 @@ namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 			return rd;
 		}
 
-		private void ImportSwitchingOperations()
+		private void ImportSwitchingOperation()
 		{
-			SortedDictionary<string, object> cimSWOperations = concreteModel.GetAllObjectsOfType("FTN.SwitchingOperations");
+			SortedDictionary<string, object> cimSWOperations = concreteModel.GetAllObjectsOfType("FTN.SwitchingOperation");
 			if (cimSWOperations != null)
 			{
 				foreach (KeyValuePair<string, object> cimSWOperationPair in cimSWOperations)

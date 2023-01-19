@@ -173,6 +173,8 @@
 		{
 			if ((cimCurveData != null) && (rd != null))
 			{
+				PowerTransformerConverter.PopulateIdentifiedObjectProperties(cimCurveData, rd);
+
 				if (cimCurveData.XvalueHasValue)
 				{
 					rd.AddProperty(new Property(ModelCode.CURVEDATA_XVALUE, cimCurveData.Xvalue));
@@ -238,17 +240,19 @@
 			if ((cimSwitch != null) && (rd != null))
 			{
 				PowerTransformerConverter.PopulateConductingEquipmentProperties(cimSwitch, rd);
-			}
-			if (cimSwitch.SwitchingOperationsHasValue)
-			{
-				long gid = importHelper.GetMappedGID(cimSwitch.SwitchingOperations.ID);
-				if (gid < 0)
+
+				if (cimSwitch.SwitchingOperationsHasValue)
 				{
-					report.Report.Append("WARNING: Convert ").Append(cimSwitch.GetType().ToString()).Append(" rdfID = \"").Append(cimSwitch.ID);
-					report.Report.Append("\" - Failed to set reference to Switching Operation: rdfID \"").Append(cimSwitch.SwitchingOperations.ID).AppendLine(" \" is not mapped to GID!");
+					long gid = importHelper.GetMappedGID(cimSwitch.SwitchingOperations.ID);
+					if (gid < 0)
+					{
+						report.Report.Append("WARNING: Convert ").Append(cimSwitch.GetType().ToString()).Append(" rdfID = \"").Append(cimSwitch.ID);
+						report.Report.Append("\" - Failed to set reference to Switching Operation: rdfID \"").Append(cimSwitch.SwitchingOperations.ID).AppendLine(" \" is not mapped to GID!");
+					}
+					rd.AddProperty(new Property(ModelCode.SWITCH_SWITCHINGOP, gid));
 				}
-				rd.AddProperty(new Property(ModelCode.SWITCH_SWITCHINGOP, gid));
 			}
+			
 		}
 
 		public static void PopulateGroundDisconnectorProperties(FTN.GroundDisconnector cimGroundDisc, ResourceDescription rd, ImportHelper importHelper, TransformAndLoadReport report)
