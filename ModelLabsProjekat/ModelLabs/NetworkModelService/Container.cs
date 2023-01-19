@@ -9,8 +9,7 @@ using System.Text;
 using System.Xml;
 using FTN.Common;
 using FTN.Services.NetworkModelService.DataModel.Core;
-using FTN.Services.NetworkModelService.DataModel.Wires;
-using FTN.Services.NetworkModelService.DataModel;
+
 
 
 namespace FTN.Services.NetworkModelService
@@ -122,23 +121,24 @@ namespace FTN.Services.NetworkModelService
 			IdentifiedObject io = null;			
 			switch ((DMSType)type)
 			{
-				case DMSType.BASEVOLTAGE:
-					io = new BaseVoltage(globalId);
+				case DMSType.CURVE:
+					io = new Curve(globalId);
 					break;
-
-				case DMSType.LOCATION:
-					io = new Location(globalId);
+				case DMSType.CURVEDATA:
+					io = new CurveData(globalId);
 					break;
-				case DMSType.POWERTR:
-					io = new PowerTransformer(globalId);
+				case DMSType.GROUNDDISC:
+					io = new GroundDisconnector(globalId);
 					break;
-				case DMSType.POWERTRWINDING:
-					io = new TransformerWinding(globalId);
+				case DMSType.IRRTIMEPOINT:
+					io = new IrregularTimePoint(globalId);
 					break;
-				case DMSType.WINDINGTEST:
-					io = new WindingTest(globalId);
-					break;			
-
+				case DMSType.OUTAGESCHEDULE:
+					io = new OutageSchedule(globalId);
+					break;
+				case DMSType.SWITCHINGOP:
+					io = new SwitchingOperation(globalId);
+					break;
 				default:					
 					string message = String.Format("Failed to create entity because specified type ({0}) is not supported.", type);
 					CommonTrace.WriteTrace(CommonTrace.TraceError, message);

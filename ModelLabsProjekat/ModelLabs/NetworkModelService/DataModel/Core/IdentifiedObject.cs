@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,7 +28,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		/// Global id of the identified object (SystemId - 4 nibls, DMSType - 4 nibls, FragmentId - 8 nibls)
 		/// </summary>
 		private long globalId;
-		
+
 		/// <summary>
 		/// Name of identified object
 		/// </summary>		
@@ -42,16 +42,16 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		/// <summary>
 		/// Description of identified object
 		/// </summary>		
-		private string description = string.Empty;
-		
+		private string alias = string.Empty;
+
 		/// <summary>
 		/// Initializes a new instance of the IdentifiedObject class.
 		/// </summary>		
 		/// <param name="globalId">Global id of the entity.</param>
 		public IdentifiedObject(long globalId)
 		{
-			this.globalId = globalId;			
-		}		
+			this.globalId = globalId;
+		}
 
 		/// <summary>
 		/// Gets or sets global id of the entity (identified object).
@@ -75,12 +75,12 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		public string Name
 		{
 			get
-			{				
+			{
 				return name;
 			}
 
 			set
-			{			
+			{
 				name = value;
 			}
 		}
@@ -97,19 +97,19 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		/// <summary>
 		/// Gets or sets description of the entity (identified object).
 		/// </summary>			
-		public string Description
+		public string Alias
 		{
-			get { return description; }
-			set { description = value; }
-		}		
+			get { return alias; }
+			set { alias = value; }
+		}
 
 		public static bool operator ==(IdentifiedObject x, IdentifiedObject y)
 		{
-			if(Object.ReferenceEquals(x, null) && Object.ReferenceEquals(y, null))
+			if (Object.ReferenceEquals(x, null) && Object.ReferenceEquals(y, null))
 			{
 				return true;
 			}
-			else if((Object.ReferenceEquals(x, null) && !Object.ReferenceEquals(y, null)) || (!Object.ReferenceEquals(x, null) && Object.ReferenceEquals(y, null)))
+			else if ((Object.ReferenceEquals(x, null) && !Object.ReferenceEquals(y, null)) || (!Object.ReferenceEquals(x, null) && Object.ReferenceEquals(y, null)))
 			{
 				return false;
 			}
@@ -126,7 +126,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 
 		public override bool Equals(object x)
 		{
-			if(Object.ReferenceEquals(x, null))
+			if (Object.ReferenceEquals(x, null))
 			{
 				return false;
 			}
@@ -134,10 +134,10 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 			{
 				IdentifiedObject io = (IdentifiedObject)x;
 				return ((io.GlobalId == this.GlobalId) && (io.name == this.name) && (io.mrid == this.mrid) &&
-						(io.description == this.description));
+						(io.alias == this.alias));
 			}
 		}
-		
+
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
@@ -147,22 +147,22 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 
 		public virtual bool HasProperty(ModelCode property)
 		{
-			switch(property)
+			switch (property)
 			{
-				case ModelCode.IDOBJ_GID:				
+				case ModelCode.IDOBJ_GID:
 				case ModelCode.IDOBJ_NAME:
-				case ModelCode.IDOBJ_DESCRIPTION:
+				case ModelCode.IDOBJ_ALIASNAME:
 				case ModelCode.IDOBJ_MRID:
 					return true;
 
-				default:				
+				default:
 					return false;
 			}
 		}
 
 		public virtual void GetProperty(Property property)
 		{
-			switch(property.Id)
+			switch (property.Id)
 			{
 				case ModelCode.IDOBJ_GID:
 					property.SetValue(globalId);
@@ -176,37 +176,37 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 					property.SetValue(mrid);
 					break;
 
-                case ModelCode.IDOBJ_DESCRIPTION:
-                    property.SetValue(description);
-                    break;
-			
+				case ModelCode.IDOBJ_ALIASNAME:
+					property.SetValue(alias);
+					break;
+
 				default:
 					string message = string.Format("Unknown property id = {0} for entity (GID = 0x{1:x16}).", property.Id.ToString(), this.GlobalId);
 					CommonTrace.WriteTrace(CommonTrace.TraceError, message);
-					throw new Exception(message);										
+					throw new Exception(message);
 			}
 		}
 
 		public virtual void SetProperty(Property property)
 		{
-			switch(property.Id)
+			switch (property.Id)
 			{
 				case ModelCode.IDOBJ_NAME:
-					name = property.AsString();					
+					name = property.AsString();
 					break;
 
-				case ModelCode.IDOBJ_DESCRIPTION:
-					description = property.AsString();					
+				case ModelCode.IDOBJ_ALIASNAME:
+					alias = property.AsString();
 					break;
 
-				case ModelCode.IDOBJ_MRID:					
+				case ModelCode.IDOBJ_MRID:
 					mrid = property.AsString();
-					break;				
+					break;
 
-				default:					
+				default:
 					string message = string.Format("Unknown property id = {0} for entity (GID = 0x{1:x16}).", property.Id.ToString(), this.GlobalId);
 					CommonTrace.WriteTrace(CommonTrace.TraceError, message);
-					throw new Exception(message);					
+					throw new Exception(message);
 			}
 		}
 
@@ -217,11 +217,11 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		public virtual bool IsReferenced
 		{
 			get
-			{			
+			{
 				return false;
 			}
 		}
-			
+
 		public virtual void GetReferences(Dictionary<ModelCode, List<long>> references, TypeOfReference refType)
 		{
 			return;
@@ -231,14 +231,14 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 		{
 			string message = string.Format("Can not add reference {0} to entity (GID = 0x{1:x16}).", referenceId, this.GlobalId);
 			CommonTrace.WriteTrace(CommonTrace.TraceError, message);
-			throw new Exception(message);						
+			throw new Exception(message);
 		}
 
 		public virtual void RemoveReference(ModelCode referenceId, long globalId)
 		{
 			string message = string.Format("Can not remove reference {0} from entity (GID = 0x{1:x16}).", referenceId, this.GlobalId);
 			CommonTrace.WriteTrace(CommonTrace.TraceError, message);
-			throw new ModelException(message);		
+			throw new ModelException(message);
 		}
 
 		#endregion IReference implementation
@@ -313,7 +313,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
 					valuesInOriginal.Add(rd.Properties[i]);
 				}
 			}
-		}	
+		}
 
 		#endregion utility methods
 	}
