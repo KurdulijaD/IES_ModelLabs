@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMSTestClient", "NetworkMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkModelServiceSelfHost", "NetworkModelService\ServiceHost\NetworkModelServiceSelfHost\NetworkModelServiceSelfHost.csproj", "{E112FFCC-BD88-4056-99E1-0991A0E82588}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUITestClient", "GUITestClient\GUITestClient.csproj", "{4093030A-DD13-4A15-9535-F323CECCEE11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,6 +146,18 @@ Global
 		{E112FFCC-BD88-4056-99E1-0991A0E82588}.Release|x64.Build.0 = Release|x64
 		{E112FFCC-BD88-4056-99E1-0991A0E82588}.Release|x86.ActiveCfg = Release|x86
 		{E112FFCC-BD88-4056-99E1-0991A0E82588}.Release|x86.Build.0 = Release|x86
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Debug|x64.Build.0 = Debug|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Debug|x86.Build.0 = Debug|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Release|x64.ActiveCfg = Release|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Release|x64.Build.0 = Release|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Release|x86.ActiveCfg = Release|Any CPU
+		{4093030A-DD13-4A15-9535-F323CECCEE11}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -156,6 +170,7 @@ Global
 		{ADE96497-7C11-40B6-AE82-57F956C9F104} = {ABC630A2-50D2-4DF5-B4FF-C6E1FABE530E}
 		{32EE9373-A350-42AC-972B-41B2EDABA082} = {CD0EE85F-3877-4725-9A29-968A33156D3D}
 		{E112FFCC-BD88-4056-99E1-0991A0E82588} = {ABC630A2-50D2-4DF5-B4FF-C6E1FABE530E}
+		{4093030A-DD13-4A15-9535-F323CECCEE11} = {CD0EE85F-3877-4725-9A29-968A33156D3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B55F891D-79E4-4324-9D36-C1AE83938CFF}

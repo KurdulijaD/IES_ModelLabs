@@ -75,7 +75,7 @@ namespace FTN.Services.NetworkModelService.DataModel.Core
                     property.SetValue(y3value);
                     break;
                 default:
-                    base.SetProperty(property);
+                    base.GetProperty(property);
                     break;
             }
         }
