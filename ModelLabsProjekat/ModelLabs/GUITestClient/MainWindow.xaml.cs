@@ -1,4 +1,6 @@
 ﻿using FTN.Common;
+using FTN.Services.NetworkModelService;
+using GUITestClient.DataTools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +45,7 @@ namespace GUITestClient
 
             gids = GetAllDecimalGids();
             List<string> hexGids = GetAllStringGids();
-
+            GIDCombobox.ItemsSource = hexGids;
         }
 
         private void Button_GetExtentValues_Click(object sender, RoutedEventArgs e)
@@ -76,7 +78,8 @@ namespace GUITestClient
 
         private string GetStringGidFromDecimal(long gid)
         {
-            return "0x0000000" + gid.ToString("X");
+            string str = String.Format("0x{0:x16}", gid);
+            return str;
         }
 
         private List<string> GetAllStringGids()
@@ -205,7 +208,17 @@ namespace GUITestClient
                         {
                             ResultsTextBox.Text += "empty long/reference vector";
                         }
-
+                        break;
+                    case PropertyType.Enum:
+                        try
+                        {
+                            EnumDescs enumDescs = new EnumDescs();
+                            ResultsTextBox.Text += enumDescs.GetStringFromEnum(rd.Properties[i].Id, rd.Properties[i].AsEnum());
+                        }
+                        catch (Exception)
+                        {
+                            ResultsTextBox.Text += rd.Properties[i].AsEnum();
+                        }
                         break;
                     default:
                         throw new Exception("Failed to export Resource Description as XML. Invalid property type.");
@@ -214,7 +227,6 @@ namespace GUITestClient
             }
         }
 
-        //dodajem sve gidove u combobox
         private void GIDCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             long gid = GetGID();

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUITestClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="900">
+        Title="MainWindow" Height="600" Width="900">
     <Grid>
 
         <Grid Background="CadetBlue" Height="59" VerticalAlignment="Top" HorizontalAlignment="Left" Width="900">
@@ -25,7 +25,7 @@
 
         <TextBox x:Name="ResultsTextBox" VerticalScrollBarVisibility="Visible" IsEnabled="True" Height="273" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="374,119,9.6,0"/>
 
-        <Grid x:Name="SelectPropertiesGrid" HorizontalAlignment="Left" Height="235" Margin="31,185,0,0" VerticalAlignment="Top" Width="338">
+        <Grid x:Name="SelectPropertiesGrid" HorizontalAlignment="Left" Height="364" Margin="31,185,0,0" VerticalAlignment="Top" Width="338">
             <CheckBox x:Name="SellectAllCheckBox" Visibility="Hidden" Click="SellectAllCheckBox_Click" Content="SelectAll" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81"/>
             <CheckBox x:Name="Item1CheckBox" Visibility="Hidden" Content="Item" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" Width="146"/>
             <CheckBox x:Name="Item2CheckBox" Visibility="Hidden" Content="Item" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,51,0,0" VerticalAlignment="Top" Width="156"/>
@@ -36,10 +36,10 @@
             <CheckBox x:Name="Item7CheckBox" Visibility="Hidden" Content="Item4" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,156,0,0" VerticalAlignment="Top" Width="178"/>
             <CheckBox x:Name="Item8CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,177,0,0" VerticalAlignment="Top" Width="178"/>
             <CheckBox x:Name="Item9CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,198,0,0" VerticalAlignment="Top" Width="178"/>
-            <CheckBox x:Name="Item10CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,198,0,0" VerticalAlignment="Top" Width="178"/>
-            <CheckBox x:Name="Item11CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="178"/>
-            <CheckBox x:Name="Item12CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="178"/>
-            <CheckBox x:Name="Item13CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,261,0,0" VerticalAlignment="Top" Width="178"/>
+            <CheckBox x:Name="Item10CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="178"/>
+            <CheckBox x:Name="Item11CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="178"/>
+            <CheckBox x:Name="Item12CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,261,0,0" VerticalAlignment="Top" Width="178"/>
+            <CheckBox x:Name="Item13CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,282,0,0" VerticalAlignment="Top" Width="178"/>
 
         </Grid>
 

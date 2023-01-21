@@ -56,5 +56,36 @@ namespace FTN.ServiceContracts
 		{
 			return Channel.IteratorRewind(id);
 		}
+
+		//todo
+		public List<long> GetAllGIDs()
+		{
+			return Channel.GetAllGIDs();
+		}
+
+		public List<ModelCode> GetAllProperties(long gid)
+		{
+			return Channel.GetAllProperties(gid);
+		}
+
+		public List<ModelCode> GetAllConcreteModels()
+		{
+			return Channel.GetAllConcreteModels();
+		}
+
+		public List<ModelCode> GetAllModelProps(ModelCode code)
+		{
+			return Channel.GetAllModelProps(code);
+		}
+
+		public List<ModelCode> GetReferenceProps(long gid)
+		{
+			return Channel.GetReferenceProps(gid);
+		}
+
+		public List<ModelCode> GetProperties(List<ModelCode> codes)
+		{
+			return Channel.GetProperties(codes);
+		}
 	}
 }

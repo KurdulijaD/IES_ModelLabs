@@ -139,5 +139,10 @@ namespace ModelLabsApp
 		{
 			Close();
 		}
-	}
+
+        private void richTextBoxReport_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

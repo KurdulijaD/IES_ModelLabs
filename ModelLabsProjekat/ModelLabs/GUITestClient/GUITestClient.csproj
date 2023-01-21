@@ -57,6 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataTools\DataConvertor.cs" />
+    <Compile Include="DataTools\DataParser.cs" />
+    <Compile Include="DataTools\DataPrinter.cs" />
+    <Compile Include="DataTools\GDAClient.cs" />
     <Compile Include="GetExtentValues.xaml.cs">
       <DependentUpon>GetExtentValues.xaml</DependentUpon>
     </Compile>
@@ -115,6 +119,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{892CBE15-9ED7-4540-81FA-0EAABA592138}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetworkModelService\NetworkModelService.csproj">
+      <Project>{2630D180-1B68-4E84-AEAC-42EE8C88B50F}</Project>
+      <Name>NetworkModelService</Name>
     </ProjectReference>
     <ProjectReference Include="..\NetworkModelService\Test\NMSTestClient\NMSTestClient.csproj">
       <Project>{32EE9373-A350-42AC-972B-41B2EDABA082}</Project>

@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUITestClient"
         mc:Ignorable="d"
-        Title="GetExtentValues" Height="450" Width="900">
-    <!--<Grid>
+        Title="GetExtentValues" Height="600" Width="900">
+    <Grid>
         <Grid Background="CadetBlue" HorizontalAlignment="Left" Height="59" VerticalAlignment="Top" Width="900" Margin="0,0,-0.4,0">
 
             <Button x:Name="ButtonGetValues" Background="Transparent" Content="GetValues" BorderThickness="0" FontSize="25" FontFamily="Cambria" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="201" Height="39" Click="ButtonGetValues_Click"/>
@@ -35,6 +35,8 @@
         <CheckBox x:Name="Item7CheckBox" Visibility="Hidden" Content="Item4" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,355,0,0" VerticalAlignment="Top" Width="242"/>
         <CheckBox x:Name="Item8CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,376,0,0" VerticalAlignment="Top" Width="242"/>
         <CheckBox x:Name="Item9CheckBox"  Visibility="Hidden" Content="Item6" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,397,0,0" VerticalAlignment="Top" Width="242"/>
+        <CheckBox x:Name="Item10CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,418,0,0" VerticalAlignment="Top" Width="242"/>
+        <CheckBox x:Name="Item11CheckBox"  Visibility="Hidden" Content="Item6" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,439,0,0" VerticalAlignment="Top" Width="242"/>
 
-    </Grid>-->
+    </Grid>
 </Window>

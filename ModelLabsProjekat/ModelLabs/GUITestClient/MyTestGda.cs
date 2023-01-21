@@ -62,7 +62,7 @@ namespace GUITestClient
             return rd;
         }
 
-        public List<long> GetExtentValues(ModelCode modelCode)
+        public List<long> GetExtentValues(ModelCode modelCode, List<ModelCode> properties)
         {
             string message = "Getting extent values method started.";
             Console.WriteLine(message);
@@ -76,8 +76,6 @@ namespace GUITestClient
             {
                 int numberOfResources = 2;
                 int resourcesLeft = 0;
-
-                List<ModelCode> properties = modelResourcesDesc.GetAllPropertyIds(modelCode);
 
                 iteratorId = GdaQueryProxy.GetExtentValues(modelCode, properties);
                 resourcesLeft = GdaQueryProxy.IteratorResourcesLeft(iteratorId);
