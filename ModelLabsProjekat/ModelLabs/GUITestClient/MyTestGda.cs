@@ -122,7 +122,7 @@ namespace GUITestClient
             return ids;
         }
 
-        public List<long> GetRelatedValues(long sourceGlobalId, Association association)
+        public List<long> GetRelatedValues(long sourceGlobalId, Association association, List<ModelCode> properties)
         {
             string message = "Getting related values method started.";
             Console.WriteLine(message);
@@ -136,11 +136,6 @@ namespace GUITestClient
 
             try
             {
-                List<ModelCode> properties = new List<ModelCode>();
-                properties.Add(ModelCode.IDOBJ_ALIASNAME);
-                properties.Add(ModelCode.IDOBJ_MRID);
-                properties.Add(ModelCode.IDOBJ_NAME);
-
                 int iteratorId = GdaQueryProxy.GetRelatedValues(sourceGlobalId, properties, association);
                 int resourcesLeft = GdaQueryProxy.IteratorResourcesLeft(iteratorId);
 

@@ -48,29 +48,6 @@ namespace GUITestClient
             GIDCombobox.ItemsSource = hexGids;
         }
 
-        private void Button_GetExtentValues_Click(object sender, RoutedEventArgs e)
-        {
-            GetExtentValues window = new GetExtentValues();
-            this.Close();
-            window.Show();
-        }
-
-
-        private void Button_GetRelatedValues_Click(object sender, RoutedEventArgs e)
-        {
-            GetRelatedValues window = new GetRelatedValues();
-            this.Close();
-            window.Show();
-        }
-
-
-        private void Button_GetValues_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow window = new MainWindow();
-            this.Close();
-            window.Show();
-        }
-
         private List<long> GetAllDecimalGids()
         {
             return testGda.TestGetExtentValuesAllTypes();
@@ -131,10 +108,6 @@ namespace GUITestClient
                 properties.Add(propertyIDsByModelCode[code][9]);
             if (Item11CheckBox.IsChecked == true)
                 properties.Add(propertyIDsByModelCode[code][10]);
-            if (Item12CheckBox.IsChecked == true)
-                properties.Add(propertyIDsByModelCode[code][11]);
-            if (Item13CheckBox.IsChecked == true)
-                properties.Add(propertyIDsByModelCode[code][12]);
 
             return properties;
         }
@@ -307,16 +280,6 @@ namespace GUITestClient
                         Item11CheckBox.Content = c.ToString();
                         Item11CheckBox.IsChecked = false;
                         break;
-                    case 11:
-                        Item12CheckBox.Visibility = Visibility.Visible;
-                        Item12CheckBox.Content = c.ToString();
-                        Item12CheckBox.IsChecked = false;
-                        break;
-                    case 12:
-                        Item13CheckBox.Visibility = Visibility.Visible;
-                        Item13CheckBox.Content = c.ToString();
-                        Item13CheckBox.IsChecked = false;
-                        break;
                     default:
                         Item1CheckBox.Visibility = Visibility.Visible;
                         Item1CheckBox.IsChecked = false;
@@ -373,14 +336,6 @@ namespace GUITestClient
                         Item11CheckBox.Visibility = Visibility.Hidden;
                         Item11CheckBox.IsChecked = false;
                         break;
-                    case 11:
-                        Item12CheckBox.Visibility = Visibility.Hidden;
-                        Item12CheckBox.IsChecked = false;
-                        break;
-                    case 12:
-                        Item13CheckBox.Visibility = Visibility.Hidden;
-                        Item13CheckBox.IsChecked = false;
-                        break;
                     default:
                         Item1CheckBox.Content = "ERROR";
                         break;
@@ -414,10 +369,6 @@ namespace GUITestClient
                     Item10CheckBox.IsChecked = true;
                 if (Item11CheckBox.IsVisible)
                     Item11CheckBox.IsChecked = true;
-                if (Item12CheckBox.IsVisible)
-                    Item12CheckBox.IsChecked = true;
-                if (Item13CheckBox.IsVisible)
-                    Item13CheckBox.IsChecked = true;
             }
             else
             {
@@ -443,12 +394,32 @@ namespace GUITestClient
                     Item10CheckBox.IsChecked = false;
                 if (Item11CheckBox.IsVisible)
                     Item11CheckBox.IsChecked = false;
-                if (Item12CheckBox.IsVisible)
-                    Item12CheckBox.IsChecked = false;
-                if (Item13CheckBox.IsVisible)
-                    Item13CheckBox.IsChecked = false;
             }
         }
+
+        private void Button_GetExtentValues_Click(object sender, RoutedEventArgs e)
+        {
+            GetExtentValues window = new GetExtentValues();
+            this.Close();
+            window.Show();
+        }
+
+
+        private void Button_GetRelatedValues_Click(object sender, RoutedEventArgs e)
+        {
+            GetRelatedValues window = new GetRelatedValues();
+            this.Close();
+            window.Show();
+        }
+
+
+        private void Button_GetValues_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            this.Close();
+            window.Show();
+        }
+
 
     }
 }

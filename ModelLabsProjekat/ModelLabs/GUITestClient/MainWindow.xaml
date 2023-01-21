@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUITestClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="900">
+        Title="MainWindow" Height="800" Width="900">
     <Grid>
 
         <Grid Background="CadetBlue" Height="59" VerticalAlignment="Top" HorizontalAlignment="Left" Width="900">
@@ -38,9 +38,7 @@
             <CheckBox x:Name="Item9CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,198,0,0" VerticalAlignment="Top" Width="178"/>
             <CheckBox x:Name="Item10CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,219,0,0" VerticalAlignment="Top" Width="178"/>
             <CheckBox x:Name="Item11CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,240,0,0" VerticalAlignment="Top" Width="178"/>
-            <CheckBox x:Name="Item12CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,261,0,0" VerticalAlignment="Top" Width="178"/>
-            <CheckBox x:Name="Item13CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,282,0,0" VerticalAlignment="Top" Width="178"/>
-
+        
         </Grid>
 
         <Label Content="Choose GID:" HorizontalAlignment="Left" FontSize="14" FontFamily="Cambria" Margin="31,119,0,0" VerticalAlignment="Top" Width="162"/>
