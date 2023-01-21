@@ -57,10 +57,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataTools\DataConvertor.cs" />
-    <Compile Include="DataTools\DataParser.cs" />
-    <Compile Include="DataTools\DataPrinter.cs" />
-    <Compile Include="DataTools\GDAClient.cs" />
     <Compile Include="GetExtentValues.xaml.cs">
       <DependentUpon>GetExtentValues.xaml</DependentUpon>
     </Compile>

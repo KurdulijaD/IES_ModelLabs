@@ -1,6 +1,5 @@
 ﻿using FTN.Common;
 using FTN.Services.NetworkModelService;
-using GUITestClient.DataTools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
