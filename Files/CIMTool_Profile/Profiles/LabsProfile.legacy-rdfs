@@ -35,6 +35,15 @@
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#Switch.switchOnCount">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>The switch on count since the switch was last reset or initialized.</rdfs:comment>
+    <rdfs:label>switchOnCount</rdfs:label>
+    <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#Switch"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#Package_IEC61970">
     <cims:belongsToCategory rdf:resource="#Package_TC57CIM"/>
     <rdfs:comment>The ControlArea package models area specifications which can be used for a variety of purposes.  The package as a whole models potentially overlapping control area specifications for the purpose of actual generation control, load forecast area load capture, or powerflow based analysis.</rdfs:comment>
@@ -115,6 +124,13 @@
     <rdfs:label>S</rdfs:label>
     <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol">
+    <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
+    <rdfs:comment>The units defiend for usage in the CIM.</rdfs:comment>
+    <rdfs:label>UnitSymbol</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#CurveData.y1value">
     <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
     <rdfs:comment>The data value of the  first Y-axis variable, depending on the Y-axis units.</rdfs:comment>
@@ -123,13 +139,6 @@
     <rdfs:domain rdf:resource="#CurveData"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="#UnitSymbol">
-    <cims:belongsToCategory rdf:resource="#Package_Domain"/>
-    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#enumeration"/>
-    <rdfs:comment>The units defiend for usage in the CIM.</rdfs:comment>
-    <rdfs:label>UnitSymbol</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="#UnitMultiplier.n">
     <rdfs:comment>Nano 10**-9.</rdfs:comment>
@@ -222,6 +231,15 @@
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#Switch.ratedCurrent">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>The maximum continuous current carrying capacity in amps governed by the device material and construction.</rdfs:comment>
+    <rdfs:label>ratedCurrent</rdfs:label>
+    <rdfs:range rdf:resource="#CurrentFlow"/>
+    <rdfs:domain rdf:resource="#Switch"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#Switch.SwitchingOperations">
     <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#byreference"/>
     <rdfs:comment>A switch may be operated by many schedules.</rdfs:comment>
@@ -306,12 +324,30 @@
     <rdfs:label>c</rdfs:label>
     <rdf:type rdf:resource="#UnitMultiplier"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#Switch.switchOnDate">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>The date and time when the switch was last switched on.</rdfs:comment>
+    <rdfs:label>switchOnDate</rdfs:label>
+    <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Switch"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#CurveData.y2value">
     <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
     <rdfs:comment>The data value of the second Y-axis variable (if present), depending on the Y-axis units.</rdfs:comment>
     <rdfs:label>y2value</rdfs:label>
     <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     <rdfs:domain rdf:resource="#CurveData"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Equipment.aggregate">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>The single instance of equipment represents multiple pieces of equipment that have been modeled together as an aggregate.  Examples would be power transformers or sychronous machines operating in parallel modeled as a single aggregate power transformer or aggregate synchronous machine.  This is not to be used to indicate equipment that is part of a group of interdependent equipment produced by a network production program.</rdfs:comment>
+    <rdfs:label>aggregate</rdfs:label>
+    <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Equipment"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
@@ -376,6 +412,13 @@
     <rdfs:label>h</rdfs:label>
     <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#CurrentFlow">
+    <cims:belongsToCategory rdf:resource="#Package_Domain"/>
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#cimdatatype"/>
+    <rdfs:comment>Electrical current with sign convention: positive flow is out of the conducting equipment into the connectivity node.</rdfs:comment>
+    <rdfs:label>CurrentFlow</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#IdentifiedObject.name">
     <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
     <rdfs:comment>The name is any free human readable and possibly non unique text naming the object.</rdfs:comment>
@@ -399,6 +442,11 @@
     <rdfs:label>ConductingEquipment</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol.V">
+    <rdfs:comment>Voltage in volt.</rdfs:comment>
+    <rdfs:label>V</rdfs:label>
+    <rdf:type rdf:resource="#UnitSymbol"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#IdentifiedObject">
     <cims:belongsToCategory rdf:resource="#Package_Core"/>
     <rdfs:comment>This is a root class to provide common identification for all classes needing identification and naming attributes.</rdfs:comment>
@@ -415,11 +463,6 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <rdfs:domain rdf:resource="#IdentifiedObject"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="#UnitSymbol.V">
-    <rdfs:comment>Voltage in volt.</rdfs:comment>
-    <rdfs:label>V</rdfs:label>
-    <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
   <rdf:Description rdf:about="#CurveData">
     <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
@@ -456,6 +499,11 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <rdfs:label>OutageSchedule</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol.g">
+    <rdfs:comment>Mass in gram.</rdfs:comment>
+    <rdfs:label>g</rdfs:label>
+    <rdf:type rdf:resource="#UnitSymbol"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#Curve.y1Multiplier">
     <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
     <rdfs:comment>Multiplier for Y1-axis.</rdfs:comment>
@@ -464,11 +512,6 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <rdfs:domain rdf:resource="#Curve"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="#UnitSymbol.g">
-    <rdfs:comment>Mass in gram.</rdfs:comment>
-    <rdfs:label>g</rdfs:label>
-    <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
   <rdf:Description rdf:about="#BasicIntervalSchedule">
     <rdfs:subClassOf rdf:resource="#IdentifiedObject"/>
@@ -481,6 +524,15 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <rdfs:comment>Dimension less quantity, e.g. count, per unit, etc.</rdfs:comment>
     <rdfs:label>none</rdfs:label>
     <rdf:type rdf:resource="#UnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Switch.normalOpen">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurment the Discrete.normalValue is expected to match with the Switch.normalOpen.</rdfs:comment>
+    <rdfs:label>normalOpen</rdfs:label>
+    <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Switch"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="#UnitSymbol.W">
     <rdfs:comment>Active power in watt.</rdfs:comment>
@@ -519,6 +571,15 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
+  <rdf:Description rdf:about="#Equipment.normallyInService">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>If true, the equipment is normally in service.</rdfs:comment>
+    <rdfs:label>normallyInService</rdfs:label>
+    <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Equipment"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
   <rdf:Description rdf:about="#UnitMultiplier.M">
     <rdfs:comment>Mega 10**6.</rdfs:comment>
     <rdfs:label>M</rdfs:label>
@@ -528,6 +589,15 @@ For CIMXML data files in RDF syntax, the mRID is mapped to rdf:ID or rdf:about a
     <rdfs:comment>Plane angle in radians.</rdfs:comment>
     <rdfs:label>rad</rdfs:label>
     <rdf:type rdf:resource="#UnitSymbol"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Switch.retained">
+    <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
+    <rdfs:comment>Branch is retained in a bus branch model.</rdfs:comment>
+    <rdfs:label>retained</rdfs:label>
+    <cims:dataType rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Switch"/>
+    <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Description>
   <rdf:Description rdf:about="#Package_Domain">
     <cims:belongsToCategory rdf:resource="#Package_IEC61970"/>
@@ -575,11 +645,6 @@ Currently, normative parts of the model support the needs of information exchang
     <rdfs:label>m3</rdfs:label>
     <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
-  <rdf:Description rdf:about="#UnitSymbol.degC">
-    <rdfs:comment>Relative temperature in degrees Celsius. In the SI unit system the symbol is ºC. Electric charge is measured in coulomb that has the unit symbol C. To destinguish degree Celsius form coulomb the symbol used in the UML is degC. Reason for not using ºC is the special character º is difficult to manage in software.</rdfs:comment>
-    <rdfs:label>degC</rdfs:label>
-    <rdf:type rdf:resource="#UnitSymbol"/>
-  </rdf:Description>
   <rdf:Description rdf:about="#Curve.y2Unit">
     <cims:stereotype rdf:resource="http://langdale.com.au/2005/UML#attribute"/>
     <rdfs:comment>The Y2-axis units of measure.</rdfs:comment>
@@ -588,6 +653,11 @@ Currently, normative parts of the model support the needs of information exchang
     <rdfs:domain rdf:resource="#Curve"/>
     <cims:multiplicity rdf:resource="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#M:0..1"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#UnitSymbol.degC">
+    <rdfs:comment>Relative temperature in degrees Celsius. In the SI unit system the symbol is ºC. Electric charge is measured in coulomb that has the unit symbol C. To destinguish degree Celsius form coulomb the symbol used in the UML is degC. Reason for not using ºC is the special character º is difficult to manage in software.</rdfs:comment>
+    <rdfs:label>degC</rdfs:label>
+    <rdf:type rdf:resource="#UnitSymbol"/>
   </rdf:Description>
   <rdf:Description rdf:about="#CurveStyle.rampYValue">
     <rdfs:comment>The Y-axis values are assumed to ramp between points.</rdfs:comment>

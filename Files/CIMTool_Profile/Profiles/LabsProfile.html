@@ -416,6 +416,83 @@ p.package { position: absolute; right: 10px; top: 0px}
 <table>
 <tr>
 <th>
+<p class="name">normalOpen</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Switch.normalOpen">Switch</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">retained</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Switch.retained">Switch</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">switchOnCount</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Switch.switchOnCount">Switch</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">switchOnDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Switch.switchOnDate">Switch</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">ratedCurrent</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CurrentFlow">CurrentFlow</a>
+</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Switch.ratedCurrent">Switch</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
 <p class="name">SwitchingOperations</p>
 </th>
 <td>
@@ -433,7 +510,38 @@ p.package { position: absolute; right: 10px; top: 0px}
 </tr>
 </table>
 <table/>
-<table/>
+<table>
+<tr>
+<th>
+<p class="name">aggregate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Equipment.aggregate">Equipment</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">normallyInService</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Equipment.normallyInService">Equipment</a>
+</p>
+</td>
+</tr>
+</table>
 <table/>
 <table>
 <tr>
@@ -872,7 +980,38 @@ p.package { position: absolute; right: 10px; top: 0px}
 <p class="package">IES_Projects</p>
 <p class="comment">The parts of the power system that are designed to carry current or that are conductively connected through terminals.</p>
 <h3>Inherited Members</h3>
-<table/>
+<table>
+<tr>
+<th>
+<p class="name">aggregate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Equipment.aggregate">Equipment</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">normallyInService</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Equipment.normallyInService">Equipment</a>
+</p>
+</td>
+</tr>
+</table>
 <table/>
 <table>
 <tr>
@@ -928,6 +1067,37 @@ p.package { position: absolute; right: 10px; top: 0px}
 </a>
 <p class="package">IES_Projects</p>
 <p class="comment">The parts of a power system that are physical devices, electronic or mechanical.</p>
+<h3>Native Members</h3>
+<table>
+<tr>
+<th>
+<p class="name" id="Equipment.aggregate">aggregate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">The single instance of equipment represents multiple pieces of equipment that have been modeled together as an aggregate.  Examples would be power transformers or sychronous machines operating in parallel modeled as a single aggregate power transformer or aggregate synchronous machine.  This is not to be used to indicate equipment that is part of a group of interdependent equipment produced by a network production program.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Equipment.normallyInService">normallyInService</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">If true, the equipment is normally in service.</p>
+</td>
+</tr>
+</table>
 <h3>Inherited Members</h3>
 <table/>
 <table>
@@ -1356,6 +1526,78 @@ p.package { position: absolute; right: 10px; top: 0px}
 <table>
 <tr>
 <th>
+<p class="name" id="Switch.normalOpen">normalOpen</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">The attribute is used in cases when no Measurement for the status value is present. If the Switch has a status measurment the Discrete.normalValue is expected to match with the Switch.normalOpen.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Switch.retained">retained</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p class="comment">Branch is retained in a bus branch model.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Switch.switchOnCount">switchOnCount</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">integer</p>
+</td>
+<td>
+<p class="comment">The switch on count since the switch was last reset or initialized.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Switch.switchOnDate">switchOnDate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">dateTime</p>
+</td>
+<td>
+<p class="comment">The date and time when the switch was last switched on.</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name" id="Switch.ratedCurrent">ratedCurrent</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">
+<a href="#CurrentFlow">CurrentFlow</a>
+</p>
+</td>
+<td>
+<p class="comment">The maximum continuous current carrying capacity in amps governed by the device material and construction.</p>
+</td>
+</tr>
+<tr>
+<th>
 <p class="name" id="Switch.SwitchingOperations">SwitchingOperations</p>
 </th>
 <td>
@@ -1373,7 +1615,38 @@ p.package { position: absolute; right: 10px; top: 0px}
 </table>
 <h3>Inherited Members</h3>
 <table/>
-<table/>
+<table>
+<tr>
+<th>
+<p class="name">aggregate</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Equipment.aggregate">Equipment</a>
+</p>
+</td>
+</tr>
+<tr>
+<th>
+<p class="name">normallyInService</p>
+</th>
+<td>
+<p class="cardinality">0..1</p>
+</td>
+<td class="type">
+<p class="type">boolean</p>
+</td>
+<td>
+<p>see <a class="superclass" href="#Equipment.normallyInService">Equipment</a>
+</p>
+</td>
+</tr>
+</table>
 <table/>
 <table>
 <tr>
