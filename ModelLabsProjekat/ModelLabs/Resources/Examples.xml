@@ -106,13 +106,27 @@
 		<cim:IdentifiedObject.name>SWO_Name_2</cim:IdentifiedObject.name>
 	</cim:SwitchingOperation>
 	<cim:GroundDisconnector rdf:ID="GD_1">
+		<cim:Switch.normalOpen>true</cim:Switch.normalOpen>
+		<cim:Switch.ratedCurrent>5</cim:Switch.ratedCurrent>
+		<cim:Switch.retained>true</cim:Switch.retained>
 		<cim:Switch.SwitchingOperations rdf:resource="#SWO_1"/>
+		<cim:Switch.switchOnCount>2</cim:Switch.switchOnCount>
+		<cim:Switch.switchOnDate>2023-01-19T13:10:00</cim:Switch.switchOnDate>
+		<cim:Equipment.aggregate>true</cim:Equipment.aggregate>
+		<cim:Equipment.normallyInService>true</cim:Equipment.normallyInService>
 		<cim:IdentifiedObject.aliasName>GD_Alias_1</cim:IdentifiedObject.aliasName>
 		<cim:IdentifiedObject.mRID>GD_Id_1</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.name>GD_Name_1</cim:IdentifiedObject.name>
 	</cim:GroundDisconnector>
 	<cim:GroundDisconnector rdf:ID="GD_2">
+		<cim:Switch.normalOpen>false</cim:Switch.normalOpen>
+		<cim:Switch.ratedCurrent>3</cim:Switch.ratedCurrent>
+		<cim:Switch.retained>false</cim:Switch.retained>
 		<cim:Switch.SwitchingOperations rdf:resource="#SWO_2"/>
+		<cim:Switch.switchOnCount>2</cim:Switch.switchOnCount>
+		<cim:Switch.switchOnDate>2023-01-22T13:11:00</cim:Switch.switchOnDate>
+		<cim:Equipment.aggregate>false</cim:Equipment.aggregate>
+		<cim:Equipment.normallyInService>false</cim:Equipment.normallyInService>
 		<cim:IdentifiedObject.aliasName>GD_Alias_2</cim:IdentifiedObject.aliasName>
 		<cim:IdentifiedObject.mRID>GD_Id_2</cim:IdentifiedObject.mRID>
 		<cim:IdentifiedObject.name>GD_Name_2</cim:IdentifiedObject.name>

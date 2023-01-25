@@ -1,7 +1,7 @@
 ﻿namespace FTN.ESI.SIMES.CIM.CIMAdapter.Importer
 {
 	using FTN.Common;
-
+	using System;
 	/// <summary>
 	/// PowerTransformerConverter has methods for populating
 	/// ResourceDescription objects using PowerTransformerCIMProfile_Labs objects.
@@ -204,11 +204,20 @@
 			}
 		}
 
-		public static void PopulateEquipmentProperties(FTN.PowerSystemResource cimEquipment, ResourceDescription rd)
+		public static void PopulateEquipmentProperties(FTN.Equipment cimEquipment, ResourceDescription rd)
 		{
 			if ((cimEquipment != null) && (rd != null))
 			{
 				PowerTransformerConverter.PopulatePowerSystemResourceProperties(cimEquipment, rd);
+
+				if (cimEquipment.NormallyInServiceHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.EQUIPMENT_NORMALLYINSERVICE, cimEquipment.NormallyInService));
+				}
+				if (cimEquipment.AggregateHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.CURVEDATA_Y1VALUE, cimEquipment.Aggregate));
+				}
 			}
 		}
 
@@ -250,6 +259,26 @@
 						report.Report.Append("\" - Failed to set reference to Switching Operation: rdfID \"").Append(cimSwitch.SwitchingOperations.ID).AppendLine(" \" is not mapped to GID!");
 					}
 					rd.AddProperty(new Property(ModelCode.SWITCH_SWITCHINGOP, gid));
+				}
+				if (cimSwitch.RatedCurrentHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.SWITCH_RATEDCURRENT, cimSwitch.RatedCurrent));
+				}
+				if (cimSwitch.RetainedHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.SWITCH_RETAINED, cimSwitch.Retained));
+				}
+				if (cimSwitch.NormalOpenHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.SWITCH_NORMALOPEN, cimSwitch.NormalOpen));
+				}
+				if (cimSwitch.SwitchOnCountHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.SWITCH_SWITCHONCOUNT, cimSwitch.SwitchOnCount));
+				}
+				if (cimSwitch.SwitchOnDateHasValue)
+				{
+					rd.AddProperty(new Property(ModelCode.SWITCH_SWITCHONDATE, cimSwitch.SwitchOnDate));
 				}
 			}
 			
