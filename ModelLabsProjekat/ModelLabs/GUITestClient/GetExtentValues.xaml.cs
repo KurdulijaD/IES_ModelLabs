@@ -199,6 +199,7 @@ namespace GUITestClient
 
         private void CreateCheckBoxes()
         {
+            CleanCheckBoxes();
             int endIndex = 0;
 
             GetExtentValuesButton.Visibility = Visibility.Visible;
@@ -369,6 +370,12 @@ namespace GUITestClient
                     Item10CheckBox.IsChecked = true;
                 if (Item11CheckBox.IsVisible)
                     Item11CheckBox.IsChecked = true;
+                if (Item12CheckBox.IsVisible)
+                    Item12CheckBox.IsChecked = true;
+                if (Item13CheckBox.IsVisible)
+                    Item13CheckBox.IsChecked = true;
+                if (Item14CheckBox.IsVisible)
+                    Item14CheckBox.IsChecked = true;
             }
             else
             {
@@ -394,9 +401,32 @@ namespace GUITestClient
                     Item10CheckBox.IsChecked = false;
                 if (Item11CheckBox.IsVisible)
                     Item11CheckBox.IsChecked = false;
+                if (Item12CheckBox.IsVisible)
+                    Item12CheckBox.IsChecked = false;
+                if (Item13CheckBox.IsVisible)
+                    Item13CheckBox.IsChecked = false;
+                if (Item14CheckBox.IsVisible)
+                    Item14CheckBox.IsChecked = false;
             }
         }
 
+        public void CleanCheckBoxes()
+        {
+            Item1CheckBox.Visibility = Visibility.Hidden;
+            Item2CheckBox.Visibility = Visibility.Hidden;
+            Item3CheckBox.Visibility = Visibility.Hidden;
+            Item4CheckBox.Visibility = Visibility.Hidden;
+            Item5CheckBox.Visibility = Visibility.Hidden;
+            Item6CheckBox.Visibility = Visibility.Hidden;
+            Item7CheckBox.Visibility = Visibility.Hidden;
+            Item8CheckBox.Visibility = Visibility.Hidden;
+            Item9CheckBox.Visibility = Visibility.Hidden;
+            Item10CheckBox.Visibility = Visibility.Hidden;
+            Item11CheckBox.Visibility = Visibility.Hidden;
+            Item12CheckBox.Visibility = Visibility.Hidden;
+            Item13CheckBox.Visibility = Visibility.Hidden;
+            Item14CheckBox.Visibility = Visibility.Hidden;
+        }
 
         private void ModelCodeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

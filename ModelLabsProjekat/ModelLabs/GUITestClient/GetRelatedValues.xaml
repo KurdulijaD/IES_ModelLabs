@@ -24,16 +24,8 @@
 
         <Label Content="Choose GID:" HorizontalAlignment="Left" FontSize="14" FontFamily="Cambria" Margin="10,136,0,0" VerticalAlignment="Top" Width="162"/>
 
-        <Button x:Name="GetRelatedValuesButton" Click="GetRelatedValuesButton_Click" Content="GetRelatedValues" Visibility="Hidden" Background="CadetBlue" FontSize="17" FontFamily="Cambria" HorizontalAlignment="Left" Margin="217,237,0,0" VerticalAlignment="Top" Width="151" Height="29" RenderTransformOrigin="0.5,0.5" >
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-90.0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+        <Button x:Name="GetRelatedValuesButton" Click="GetRelatedValuesButton_Click" Content="GetRelatedValues" Visibility="Hidden"  Background="CadetBlue" FontSize="17" FontFamily="Cambria" HorizontalAlignment="Left" Margin="260,173,0,0" VerticalAlignment="Top" Width="152" Height="29" RenderTransformOrigin="0.5,0.5" />
+
 
 
         <ComboBox x:Name="AssociationComboBox" HorizontalAlignment="Left" Height="30" Margin="10,225,0,0" VerticalAlignment="Top" Width="218" SelectionChanged="AssociationComboBox_SelectionChanged"/>
@@ -54,11 +46,11 @@
         <CheckBox x:Name="Item9CheckBox"  Visibility="Hidden" Content="Item6" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="10,537,0,0" VerticalAlignment="Top" Width="242"/>
         <CheckBox x:Name="Item10CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="10,558,0,0" VerticalAlignment="Top" Width="242"/>
         <CheckBox x:Name="Item11CheckBox"  Visibility="Hidden" Content="Item6" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="10,579,0,0" VerticalAlignment="Top" Width="242"/>
-        <CheckBox x:Name="Item12CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,261,0,0" VerticalAlignment="Top" Width="178"/>
-        <CheckBox x:Name="Item13CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,282,0,0" VerticalAlignment="Top" Width="178"/>
-        <CheckBox x:Name="Item14CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,303,0,0" VerticalAlignment="Top" Width="178"/>
+        <CheckBox x:Name="Item12CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="10,600,0,0" VerticalAlignment="Top" Width="178"/>
+        <CheckBox x:Name="Item13CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="10,621,0,0" VerticalAlignment="Top" Width="178"/>
+        <CheckBox x:Name="Item14CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="10,641,0,0" VerticalAlignment="Top" Width="178"/>
 
-        <TextBox x:Name="ResultsTextBox" VerticalScrollBarVisibility="Visible" IsEnabled="True" Height="521" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="352,159,31,0"/>
+        <TextBox x:Name="ResultsTextBox" VerticalScrollBarVisibility="Visible" IsEnabled="True" Height="521" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="430,159,31,0"/>
 
     </Grid>
 </Window>
