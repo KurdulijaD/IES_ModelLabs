@@ -314,6 +314,21 @@ namespace GUITestClient
                         Item11CheckBox.Content = c.ToString();
                         Item11CheckBox.IsChecked = false;
                         break;
+                    case 11:
+                        Item12CheckBox.Visibility = Visibility.Visible;
+                        Item12CheckBox.Content = c.ToString();
+                        Item12CheckBox.IsChecked = false;
+                        break;
+                    case 12:
+                        Item13CheckBox.Visibility = Visibility.Visible;
+                        Item13CheckBox.Content = c.ToString();
+                        Item13CheckBox.IsChecked = false;
+                        break;
+                    case 13:
+                        Item14CheckBox.Visibility = Visibility.Visible;
+                        Item14CheckBox.Content = c.ToString();
+                        Item14CheckBox.IsChecked = false;
+                        break;
                     default:
                         Item1CheckBox.Visibility = Visibility.Visible;
                         Item1CheckBox.IsChecked = false;

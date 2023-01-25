@@ -216,7 +216,7 @@
 				}
 				if (cimEquipment.AggregateHasValue)
 				{
-					rd.AddProperty(new Property(ModelCode.CURVEDATA_Y1VALUE, cimEquipment.Aggregate));
+					rd.AddProperty(new Property(ModelCode.EQUIPMENT_AGREGATE, cimEquipment.Aggregate));
 				}
 			}
 		}

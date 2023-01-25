@@ -37,6 +37,9 @@
         <CheckBox x:Name="Item9CheckBox"  Visibility="Hidden" Content="Item6" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,397,0,0" VerticalAlignment="Top" Width="242"/>
         <CheckBox x:Name="Item10CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,418,0,0" VerticalAlignment="Top" Width="242"/>
         <CheckBox x:Name="Item11CheckBox"  Visibility="Hidden" Content="Item6" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="31,439,0,0" VerticalAlignment="Top" Width="242"/>
+        <CheckBox x:Name="Item12CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,261,0,0" VerticalAlignment="Top" Width="178"/>
+        <CheckBox x:Name="Item13CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,282,0,0" VerticalAlignment="Top" Width="178"/>
+        <CheckBox x:Name="Item14CheckBox" Visibility="Hidden" Content="Item5" FontSize="14" FontFamily="Cambria" HorizontalAlignment="Left" Margin="0,303,0,0" VerticalAlignment="Top" Width="178"/>
 
     </Grid>
 </Window>
